@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Repair – FixItNow</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Fix<span>It</span>Now</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="technicians.html">Technicians</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="booking.html" class="btn-nav active">Book Repair</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="technicians.html">Technicians</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="booking.html">Book Repair</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fade-in">Book a <span>Repair</span></h1>
+    <p class="fade-in">Fill in your details and we'll dispatch a certified technician to your door.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container booking-layout">
+
+    <!-- FORM -->
+    <div class="booking-form-wrap fade-up">
+      <form id="bookingForm" novalidate>
+
+        <div class="form-section-title">📋 Personal Details</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Rahul Sharma" />
+            <span class="error-msg" id="nameErr">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10"/>
+            <span class="error-msg" id="phoneErr">Enter a valid 10-digit number.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Full Address *</label>
+          <input type="text" id="address" name="address" placeholder="House/flat, Street, City, Pincode"/>
+          <span class="error-msg" id="addressErr">Please enter your address.</span>
+        </div>
+
+        <div class="form-section-title">🔧 Appliance Details</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="appliance">Appliance Type *</label>
+            <select id="appliance" name="appliance">
+              <option value="">-- Select Appliance --</option>
+              <option value="ac">Air Conditioner</option>
+              <option value="refrigerator">Refrigerator</option>
+              <option value="washing_machine">Washing Machine</option>
+              <option value="microwave">Microwave</option>
+              <option value="dishwasher">Dishwasher</option>
+              <option value="geyser">Geyser / Water Heater</option>
+            </select>
+            <span class="error-msg" id="applianceErr">Please select an appliance.</span>
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" id="brand" name="brand" placeholder="e.g. Samsung, LG, Voltas"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Issue Type *</label>
+          <div class="issues-checkbox-grid">
+            <label class="issue-check"><input type="checkbox" name="issue" value="not_working"/> Not turning on</label>
+            <label class="issue-check"><input type="checkbox" name="issue" value="minor_issue"/> Minor issue / noise</label>
+            <label class="issue-check"><input type="checkbox" name="issue" value="cooling"/> Cooling problem</label>
+            <label class="issue-check"><input type="checkbox" name="issue" value="leaking"/> Leaking / water issue</label>
+            <label class="issue-check"><input type="checkbox" name="issue" value="heating"/> Heating problem</label>
+            <label class="issue-check"><input type="checkbox" name="issue" value="major"/> Major component failure</label>
+          </div>
+          <span class="error-msg" id="issueErr">Please select at least one issue.</span>
+        </div>
+
+        <div class="form-section-title">📅 Scheduling & Preferences</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="repairDate">Preferred Date *</label>
+            <input type="date" id="repairDate" name="repairDate"/>
+            <span class="error-msg" id="dateErr">Please select a date.</span>
+          </div>
+          <div class="form-group">
+            <label for="timeSlot">Time Slot *</label>
+            <select id="timeSlot" name="timeSlot">
+              <option value="">-- Select Slot --</option>
+              <option value="morning">Morning (8 AM – 11 AM)</option>
+              <option value="afternoon">Afternoon (11 AM – 2 PM)</option>
+              <option value="evening">Evening (2 PM – 5 PM)</option>
+              <option value="night">Night (5 PM – 8 PM)</option>
+            </select>
+            <span class="error-msg" id="slotErr">Please select a time slot.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Warranty Status</label>
+          <div class="radio-group">
+            <label class="radio-label"><input type="radio" name="warranty" value="under_warranty" id="underWarranty"/> Under Warranty</label>
+            <label class="radio-label"><input type="radio" name="warranty" value="out_of_warranty" id="outWarranty" checked/> Out of Warranty</label>
+            <label class="radio-label"><input type="radio" name="warranty" value="unknown" id="unknownWarranty"/> Not Sure</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="isEmergency" name="isEmergency"/>
+            🚨 This is an emergency repair (10% surcharge applies)
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full">Confirm Booking →</button>
+      </form>
+
+      <!-- CONFIRMATION -->
+      <div class="booking-confirmation" id="bookingConfirmation" style="display:none;">
+        <div class="confirm-icon">✅</div>
+        <h2>Booking Confirmed!</h2>
+        <p>Thank you, <strong id="confirmName"></strong>! Your repair has been scheduled.</p>
+        <div class="confirm-details" id="confirmDetails"></div>
+        <a href="index.html" class="btn-primary" style="margin-top:1.5rem;display:inline-block;">Back to Home</a>
+      </div>
+    </div>
+
+    <!-- COST SUMMARY -->
+    <aside class="cost-summary fade-up" id="costSummary">
+      <div class="summary-title">💰 Repair Cost Estimate</div>
+      <div class="summary-rows">
+        <div class="summary-row">
+          <span>Diagnosis Fee</span>
+          <span id="diagFee">₹299</span>
+        </div>
+        <div class="summary-row" id="minorRow" style="display:none;">
+          <span>Minor Issue Charge</span>
+          <span>₹500</span>
+        </div>
+        <div class="summary-row" id="majorRow" style="display:none;">
+          <span>Major Issue Charge</span>
+          <span>₹1,200</span>
+        </div>
+        <div class="summary-row emergency-row" id="emergencyRow" style="display:none;">
+          <span>🚨 Emergency Surcharge (10%)</span>
+          <span id="surchargeFee">₹0</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-row total-row">
+          <span>Total Estimate</span>
+          <span id="totalCost">₹299</span>
+        </div>
+      </div>
+      <div class="summary-note">* Final charge may vary after on-site diagnosis.</div>
+      <div class="warranty-indicator" id="warrantyIndicator">
+        <span id="warrantyBadge" class="badge-out">⚠️ Out of Warranty</span>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Fix<span>It</span>Now</div>
+      <p>Fast, certified appliance repair at your doorstep.</p>
+    </div>
+    <div class="footer-links">
+      <h5>Pages</h5>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="technicians.html">Technicians</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="footer-contact">
+      <h5>Contact</h5>
+      <p>📞 1800-FIX-NOW</p>
+      <p>📧 support@fixitnow.in</p>
+      <p>📍 Mumbai, India</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FixItNow. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

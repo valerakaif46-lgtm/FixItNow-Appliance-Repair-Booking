@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing – FixItNow</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Fix<span>It</span>Now</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="technicians.html">Technicians</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="booking.html" class="btn-nav">Book Repair</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="technicians.html">Technicians</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="booking.html">Book Repair</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fade-in">Transparent <span>Pricing</span></h1>
+    <p class="fade-in">No hidden fees. Know exactly what you pay before the technician arrives.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Diagnosis Fee -->
+    <div class="pricing-block fade-up">
+      <h2>🔍 Diagnosis Fee</h2>
+      <p>A flat diagnosis fee is charged for every repair visit, regardless of the appliance or issue.</p>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Service Type</th>
+            <th>Diagnosis Fee</th>
+            <th>Includes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard Visit</td>
+            <td class="price-cell">₹299</td>
+            <td>Inspection + fault report</td>
+          </tr>
+          <tr>
+            <td>Emergency Visit (24/7)</td>
+            <td class="price-cell">₹329</td>
+            <td>Priority dispatch + inspection</td>
+          </tr>
+          <tr>
+            <td>Re-visit (within 30 days)</td>
+            <td class="price-cell">FREE</td>
+            <td>Warranty follow-up visit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Service Charges -->
+    <div class="pricing-block fade-up">
+      <h2>⚙️ Service Charge Categories</h2>
+      <p>Repair costs are calculated based on issue severity. Charges are applied on top of the diagnosis fee.</p>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Issue Category</th>
+            <th>Additional Charge</th>
+            <th>Examples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Minor Issue</td>
+            <td class="price-cell">₹500</td>
+            <td>Cleaning, minor parts, sensor reset</td>
+          </tr>
+          <tr>
+            <td>Major Issue</td>
+            <td class="price-cell">₹1,200</td>
+            <td>Compressor, PCB, motor replacement</td>
+          </tr>
+          <tr>
+            <td>Parts (if required)</td>
+            <td class="price-cell">At Actuals</td>
+            <td>OEM/compatible parts at MRP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Per Appliance -->
+    <div class="pricing-block fade-up">
+      <h2>📦 Appliance-Wise Starting Price</h2>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Appliance</th>
+            <th>Minor Repair</th>
+            <th>Major Repair</th>
+            <th>Gas Refill / Special</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>❄️ Air Conditioner</td>
+            <td class="price-cell">₹799</td>
+            <td class="price-cell">₹1,499</td>
+            <td class="price-cell">₹1,200</td>
+          </tr>
+          <tr>
+            <td>🧊 Refrigerator</td>
+            <td class="price-cell">₹799</td>
+            <td class="price-cell">₹1,499</td>
+            <td class="price-cell">₹999</td>
+          </tr>
+          <tr>
+            <td>🫧 Washing Machine</td>
+            <td class="price-cell">₹799</td>
+            <td class="price-cell">₹1,499</td>
+            <td class="price-cell">N/A</td>
+          </tr>
+          <tr>
+            <td>📡 Microwave</td>
+            <td class="price-cell">₹799</td>
+            <td class="price-cell">₹1,499</td>
+            <td class="price-cell">N/A</td>
+          </tr>
+          <tr>
+            <td>🚿 Geyser</td>
+            <td class="price-cell">₹799</td>
+            <td class="price-cell">₹1,299</td>
+            <td class="price-cell">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Emergency Surcharge -->
+    <div class="pricing-block fade-up">
+      <h2>🚨 Emergency Surcharge Details</h2>
+      <div class="emergency-pricing-card">
+        <div class="ep-icon">⚡</div>
+        <div class="ep-content">
+          <h3>10% Surcharge on Total Bill</h3>
+          <p>Emergency repairs requested outside standard hours (after 8 PM or before 8 AM), or requiring dispatch within 60 minutes, attract a 10% surcharge on the total repair bill (diagnosis + service charges).</p>
+          <ul class="ep-list">
+            <li>✅ Available 24 hours, 7 days a week</li>
+            <li>✅ 60-minute guaranteed dispatch</li>
+            <li>✅ Priority senior technician assigned</li>
+            <li>⚠️ Surcharge waived for Premium members</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formula Box -->
+    <div class="pricing-block fade-up formula-box">
+      <h2>🧮 How Your Bill is Calculated</h2>
+      <div class="formula">
+        <span class="f-item">Diagnosis Fee<br/><strong>₹299</strong></span>
+        <span class="f-op">+</span>
+        <span class="f-item">Service Charge<br/><strong>₹500 / ₹1,200</strong></span>
+        <span class="f-op">+</span>
+        <span class="f-item emergency-f">Emergency<br/><strong>+10%</strong></span>
+        <span class="f-op">=</span>
+        <span class="f-item total-f">Your Total<br/><strong>Bill</strong></span>
+      </div>
+      <a href="booking.html" class="btn-primary" style="margin-top:2rem;display:inline-block;">Get My Estimate Now</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Fix<span>It</span>Now</div>
+      <p>Fast, certified appliance repair at your doorstep.</p>
+    </div>
+    <div class="footer-links">
+      <h5>Pages</h5>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Booking</a>
+      <a href="technicians.html">Technicians</a>
+      <a href="pricing.html">Pricing</a>
+    </div>
+    <div class="footer-contact">
+      <h5>Contact</h5>
+      <p>📞 1800-FIX-NOW</p>
+      <p>📧 support@fixitnow.in</p>
+      <p>📍 Mumbai, India</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FixItNow. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
